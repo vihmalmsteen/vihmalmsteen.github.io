@@ -32,6 +32,40 @@
     </div>
 
 </div>
-    <script src="script.js"></script>
+    <script>
+
+const botao = document.querySelector('button');     
+const inputContent = document.querySelector('input');       
+const DivTable = document.getElementById('DivTable');       
+
+botao.addEventListener('click', () => {
+    console.log(inputContent.value);                        
+
+    if (inputContent.value) {
+        const topicDiv = document.createElement('div');     
+        topicDiv.className = 'topicRow';                    
+
+        const topicDivCol1 = document.createElement('div'); 
+        topicDivCol1.className = 'topic-col1';            
+        topicDivCol1.textContent = inputContent.value;    
+
+        const deleteButton = document.createElement('button'); 
+        deleteButton.className = 'delete-button';         
+        deleteButton.addEventListener('click', () => {
+            DivTable.removeChild(topicDiv);               
+        });
+
+        topicDiv.appendChild(topicDivCol1);               
+        topicDiv.appendChild(deleteButton);               
+
+        DivTable.prepend(topicDiv);                       
+        inputContent.value = '';                          
+    } else {
+        console.log('vazio');                             
+    }
+});
+
+        
+    </script>
 </body>
 </html>
