@@ -1,0 +1,109 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    /*align-items: center;  Centraliza verticalmente */
+    background-color: #F4F5FB;
+    background: repeating-linear-gradient(
+        to right,
+        #F5DCE1, /* Cor da barra */
+        #f3d7dd 4%, /* Tamanho da barra (8% da largura) */
+        #ffffff 4%, /* Cor de fundo */
+        #ffffff 6% /* Espaço entre as barras (16% total) */
+    );
+    margin: 0; /* Remove margens padrão */
+    height: 100vh; /* Altura da viewport */
+}
+
+img {
+    width: 200px;  /* Ajuste a largura conforme necessário */
+    height: auto;  /* Mantém a proporção da imagem */
+}
+
+.content {
+    /* border: solid; */
+    width: auto;
+}
+
+#bloco {
+    /* border: solid; */
+    width: 627px;
+}
+
+.backButton {
+    color: rgb(202, 21, 51);
+    font-size: 14px;
+}
+
+.logo {
+    /* border: solid; */
+    text-align: center;
+    margin: 30px;
+}
+
+.adc-item-group {
+    /* border:solid; */
+    margin: 0px 0px;
+}
+
+#input-texto {
+    width: 427px;
+    height: 25px;
+    border-radius: 8px;
+    height: 36px;
+    font-size: 14pt;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
+    border: 1px solid #ccc; /* Borda cinza */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-right: 25px;
+}
+
+.submit-button {
+    background-color: #ccc;
+    border-radius: 8px;
+    width: auto;
+    height: 36px;
+    font-size: 14pt;
+    color: white;
+    background-color: #CF3277;
+    border-color: #CF3277;
+}
+
+#DivTable {
+    border: solid;
+    border-color: #bb6262;
+    background-color: #e9a0a0;
+    border-radius: 24px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.topicRow {
+    display: flex;                     /* Organização em linha */
+    align-items: center;               /* Centraliza verticalmente */
+    margin: 5px 0;
+    padding: 5px;
+    border: 3px solid #bb6262;          /* Borda para os itens */
+    background-color: #dabcbc;
+    justify-content: space-between;    /* Alinha os elementos nas extremidades */
+    border-radius: 12px;
+}
+
+.delete-button {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background: none;
+    background-image: url('assets/trash.svg');
+    border-radius: 12px;
+    border-color: #8f2d2d;
+    background-color: #f76a6a;
+    cursor: pointer;
+}
+
