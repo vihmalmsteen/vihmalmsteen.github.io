@@ -77,14 +77,19 @@ export class dataHandler extends dataStore {
                             .then(jsonObj => {
                                 const { name, public_repos, followers, login } = jsonObj
                                 const rowsLogin = this.fullBody.querySelectorAll('tbody tr a')
-                                
+
+                                if(name===undefined) {
+                                    throw new Error("Usuário não encontrado.");
+                                }
+
                                 rowsLogin.forEach(rowLogin => {
                                     const rowLoginText = rowLogin.textContent
+                                    
                                     if(rowLoginText === '/' + login) {
                                         throw new Error("Usuário já adicionado.");
                                     }
                                 })
-                                
+
                                 return this.parseElement(name, public_repos, followers, login)
                             })
 
@@ -144,6 +149,3 @@ export class dataHandler extends dataStore {
     }
     
 }
-
-
-
