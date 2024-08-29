@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-theme-color:#000000;
+    --input-bg-color:#2F2F33;
+    --input-font-color:#7C7C8A;
+    --button-bg-color: #065E7C;
+    --button-bg-color-active: #033141;
+    --font-color: #ffffff;
+    --table-border-color:#4A808C;
+    --rmv-btn-color: #F75A68;
+    --rmv-btn-color-hover: #f3959d;
+    --rmv-btn-color-active: #ad3e47;
+    --thead-bg-color: #092D38;
+    --tbody-tr-even: #06181C;
+}
+
+body * {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    background-color: var(--bg-theme-color);
+    padding: 8rem 30rem;
+
+}
+
+header {
+    display: flex;
+    gap: 20rem;
+    justify-content: space-between;
+}
+
+header input {
+    background-color: var(--input-bg-color);
+    color: var(--input-font-color);
+    height: 4.8rem;
+    width: 40rem;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    padding-left: 1rem;
+}
+
+header div {
+    display: flex;
+    gap: 2.5rem;
+}
+
+header button {
+    width: 17rem;
+    height: 4.8rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: var(--font-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header button:hover {
+    background-color: var(--font-color);
+    color: var(--button-bg-color);
+}
+
+header button:active {
+    background-color: var(--button-bg-color-active);
+    color: var(--font-color);
+}
+
+/*troca o fundo do svg (deve estar dentro do .html)*/
+header button:hover svg path {
+    fill: var(--button-bg-color);
+}
+
+header button:active svg path {
+    fill: var(--font-color);
+}
+
+.NameAndAdr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+table {
+    color:var(--font-color);
+    text-align: left;
+    margin-top: 8.7rem;
+    border-collapse: collapse;
+    border-radius: 1rem;
+    outline: 2px solid var(--table-border-color);        /*linha externa da tabela e que border-radius passa a ajustar*/
+}
+
+table thead {
+    display: flex;
+    height: 6.4rem;
+    background-color: var(--thead-bg-color);
+    /* border-bottom: 1px solid var(--table-border-color); */
+}
+
+table thead th:first-child {
+    border-radius: 1rem 0 0 0;
+    padding-left: 4rem;
+}
+
+table thead th:last-child {
+    border-radius: 0 1rem 0 0;
+}
+
+.firstDim {
+    padding-left: 2rem;
+}
+
+tbody {
+    display: block;
+    max-height: 30rem; /* Defina a altura máxima que você deseja */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+}
+
+tr {
+    display: table; /*Mantém o comportamento de linha de tabela */
+    table-layout: fixed; /* Previne que as células mudem de tamanho */
+    width: 100%; /* Garante que a largura da linha seja 100% */
+}
+
+/*webkit-scrollbar -> barra de rolagem*/
+tbody::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/*scrollbar-track -> trilho da barra*/
+tbody::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #17383f;
+}
+
+/*scrollbar-thumb -> barra movel*/
+tbody::-webkit-scrollbar-thumb {
+    background-color: var(--table-border-color);
+    border-radius: 10px;
+}
+
+tbody tr {
+    height: 10rem;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--tbody-tr-even);
+}
+
+table a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+tbody tr td img {
+    border-radius: 50%;
+    width: 5.6rem;
+    height: 5.6rem;
+}
+
+.fourthDim button {
+    color: var(--rmv-btn-color);
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fourthDim button:hover {
+    color: var(--rmv-btn-color-hover);
+}
+
+.fourthDim button:active {
+    color: var(--rmv-btn-color-active);
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 1rem;
+}
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 1rem 0;
+}
+
+.firstDim,
+thead tr th:first-child {
+    width: 40%;
+}
